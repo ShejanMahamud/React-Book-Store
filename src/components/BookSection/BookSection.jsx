@@ -16,6 +16,7 @@ const BookSection = () => {
     },[selectAuthor]);
    
 
+
 const handleAuthorSelect = (e) => {
     setSelectAuthor(e.target.value)
 }
@@ -29,17 +30,17 @@ const handleAuthorSelect = (e) => {
        <div className='bg-gray-200 px-5 py-3 rounded-lg inline-flex justify-between'>
        <select className='bg-transparent focus:outline-none' onChange={handleAuthorSelect}>
         <option value="Choose a author">Choose a author</option>
-        <option value="Jhankar-Mahabub">Jhankar Mahabub</option>
-        <option value="Arif-Azad">Arif Azad</option>
-        <option value="Humayen-Ahmed">Humayen Ahmed</option>
-        <option value="Sadat-Hossian">Sadat Hossian</option>
-        <option value="Shayek-Ahmadullah">Shayek Ahmadullah</option>
+        <option value="jhankar-mahabub">Jhankar Mahabub</option>
+        <option value="arif-azad">Arif Azad</option>
+        <option value="humayen-ahmed">Humayen Ahmed</option>
+        <option value="sadat-hossain">Sadat Hossian</option>
+        <option value="Shaykh-Ahmadullah">Shayek Ahmadullah</option>
        </select>
        </div>
        </div>
 
 <div className='grid grid-cols-2 row-auto items-center gap-x-10 gap-y-20 my-20'>
-{books.map(book => (<Books key={book.bookTitle} book={book}></Books>))}
+{books.map(book => (<Books key={book.bookTitle} book={book} author={handleAuthorSelect}></Books>))}
 </div>
        
     </main>
