@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Books from '../Books/Books';
 
-const BookSection = () => {
-
-    const [books,setBooks] = useState([]);
+const BookSection = ({handleCartCount,getBookDetails}) => {
+    const [books, setBooks] = useState([])
     const [selectAuthor, setSelectAuthor] = useState('');
     
    
@@ -15,7 +14,11 @@ const BookSection = () => {
     }
     },[selectAuthor]);
    
-
+    useEffect(()=>{
+        fetch(`https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/BookData/choose-author.json`)
+        .then(res=>res.json())
+        .then(data => setBooks(data))
+    },[]);
 
 const handleAuthorSelect = (e) => {
     setSelectAuthor(e.target.value)
@@ -29,7 +32,7 @@ const handleAuthorSelect = (e) => {
         </h1>
        <div className='bg-gray-200 px-5 py-3 rounded-lg inline-flex justify-between'>
        <select className='bg-transparent focus:outline-none' onChange={handleAuthorSelect}>
-        <option value="Choose a author">Choose a author</option>
+        <option value="choose-author">Choose a author</option>
         <option value="jhankar-mahabub">Jhankar Mahabub</option>
         <option value="arif-azad">Arif Azad</option>
         <option value="humayen-ahmed">Humayen Ahmed</option>
@@ -39,8 +42,8 @@ const handleAuthorSelect = (e) => {
        </div>
        </div>
 
-<div className='grid grid-cols-2 row-auto items-center gap-x-10 gap-y-20 my-20'>
-{books.map(book => (<Books key={book.bookTitle} book={book} author={handleAuthorSelect}></Books>))}
+<div className='grid grid-cols-1 lg:grid-cols-2 row-auto items-center gap-x-10 gap-y-20 my-20'>
+{books.map(book => (<Books key={book.bookTitle} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails}></Books>))}
 </div>
        
     </main>

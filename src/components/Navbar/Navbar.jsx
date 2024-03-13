@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({cartCount,cartItems}) => {
+
+  const [deleteCart, setDeleteCart] = useState(false)
+
   return (
     <nav className='flex items-center justify-between w-[90%] mx-auto my-5'>
         <div className='flex items-center gap-1'>
@@ -127,13 +130,38 @@ const Navbar = () => {
 <path d="M2.83058 2.71572C0.389806 5.00335 0.389806 8.71234 2.83058 11L13.5001 21L24.1694 11C26.6102 8.71233 26.6102 5.00335 24.1694 2.71572C21.7286 0.428092 17.7714 0.428092 15.3306 2.71572L13.5001 4.43151L11.6694 2.71572C9.22864 0.428093 5.27136 0.428093 2.83058 2.71572Z" stroke="#0D0842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-
-<svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1.5H3.22222L3.66667 3.83333M5.44444 13.1667H16.5556L21 3.83333H3.66667M5.44444 13.1667L3.66667 3.83333M5.44444 13.1667L2.89679 15.8417C2.19682 16.5767 2.69257 17.8333 3.68246 17.8333H16.5556M16.5556 17.8333C15.3283 17.8333 14.3333 18.878 14.3333 20.1667C14.3333 21.4553 15.3283 22.5 16.5556 22.5C17.7829 22.5 18.7778 21.4553 18.7778 20.1667C18.7778 18.878 17.7829 17.8333 16.5556 17.8333ZM7.66667 20.1667C7.66667 21.4553 6.67174 22.5 5.44444 22.5C4.21715 22.5 3.22222 21.4553 3.22222 20.1667C3.22222 18.878 4.21715 17.8333 5.44444 17.8333C6.67174 17.8333 7.66667 18.878 7.66667 20.1667Z" stroke="#0D0842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+    <div className="dropdown dropdown-end">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div className="indicator">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#0D0842"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+          <span className="badge badge-sm indicator-item">{cartCount}</span>
         </div>
+      </div>
+      <div tabIndex={0} className="my-3 z-[1] card card-compact dropdown-content w-96 bg-base-100 shadow ">
+        <div className="card-body">
+          <span className="font-bold text-lg">{cartCount} Items</span>
+{
+  cartItems.map((book, index) => (
+    <div key={index} className='flex items-center justify-between'>
+      <span className='w-[50%]'>{book.bookName}</span>
+      <span>{book.bookPrice}</span>
+      <button onClick={()=>console.log(book.bookName)}><i class="fa-solid fa-trash"></i></button>
+    </div>
+  ))
+}
+          <span className="text-info">Subtotal: 0</span>
+          <div className="card-actions">
+            <button className="btn bg-[#FFCE1A] btn-block text-white hover:bg-[#ffce1a]">View cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+
+
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
+
