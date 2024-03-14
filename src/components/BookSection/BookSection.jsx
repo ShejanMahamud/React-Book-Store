@@ -1,5 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import Books from '../Books/Books';
+
+const settings = {
+    dots : true,
+    infinite: true,
+    slidesToShow: 2,
+    speed: 500,
+    rows: 1,
+    slidesPerRow: 2
+  };
 
 const BookSection = ({handleCartCount,getBookDetails}) => {
     const [books, setBooks] = useState([])
@@ -7,7 +19,8 @@ const BookSection = ({handleCartCount,getBookDetails}) => {
     const [searchBook, setSearchBook] = useState('');
     const [inputValue, setInputValue] = useState('');
     const [searchError, setSearchError] = useState(false);
-    const [selectCategory, setselectCategory] = useState('');
+    const [selectCategory, setSelectCategory] = useState('');
+    const [changeBookHeading,setChangeBookHeading] = useState('Recomended Books');
    
     useEffect(()=>{
         if(selectCategory){
@@ -26,7 +39,7 @@ const BookSection = ({handleCartCount,getBookDetails}) => {
     },[selectAuthor]);
    
     useEffect(()=>{
-        fetch(`https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/BookData/choose-author.json`)
+        fetch(`https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/BookData/recomended-books.json`)
         .then(res=>res.json())
         .then(data => setBooks(data))
     },[]);
@@ -50,10 +63,12 @@ const BookSection = ({handleCartCount,getBookDetails}) => {
 
 
 const handleAuthorSelect = (e) => {
+    const authorName = e.target.value;
     setSelectAuthor(e.target.value)
+    setChangeBookHeading(authorName.toUpperCase().replace('-',' '))
 }
 const handleCategorySelect = (e) => {
-    setSelectAuthor(e.target.value)
+    setSelectCategory(e.target.value)
 }
 const handleSearchBtn = () => {
     const inputValueStr = inputValue.replace(" ",'-')
@@ -62,14 +77,14 @@ const handleSearchBtn = () => {
 
   return (
     <main className='w-[90%] mx-auto my-20 font-poppins'>
-       <div className='w-full flex justify-between items-center'>
+       <div className='w-full flex justify-between items-end'>
        <div>
        <h1 className='text-xl font-semibold mb-5'>
             Top Sellers
         </h1>
        <div className='bg-gray-200 px-5 py-3 rounded-lg inline-flex justify-between'>
        <select className='bg-transparent focus:outline-none' onChange={handleAuthorSelect}>
-        <option value="choose-author">Choose a author</option>
+        <option value="recomended-books">Choose a author</option>
         <option value="jhankar-mahabub">Jhankar Mahabub</option>
         <option value="arif-azad">Arif Azad</option>
         <option value="humayen-ahmed">Humayen Ahmed</option>
@@ -88,12 +103,13 @@ const handleSearchBtn = () => {
        <select className='bg-transparent focus:outline-none' onChange={handleCategorySelect}>
         <option value="choose-category">Choose a category</option>
         <option value="programming">Programming</option>
+        <option value="islamic">Islamic</option>
        </select>
        </div>
        </div>
        
 <div>
-<div className='bg-gray-100 text-gray-500 px-5 py-2 rounded-lg flex items-center justify-between'>
+<div className='bg-gray-100 text-gray-500 px-5 py-3 rounded-lg flex items-center justify-between'>
     <input value={inputValue} onChange={(e)=>setInputValue(e.target.value)} type="text" className='bg-transparent focus:outline-none' placeholder='Search Books..'/>
     <button onClick={handleSearchBtn}><i class="las la-search text-xl"></i></button>
         </div>
@@ -106,8 +122,10 @@ const handleSearchBtn = () => {
 
        </div>
 
-<div className='grid grid-cols-1 lg:grid-cols-2 row-auto items-center gap-x-10 gap-y-20 my-20'>
-{books.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails}></Books>))}
+       <div className='w-full my-20'>
+        <h1 className='text-xl font-semibold mb-5'>{changeBookHeading}</h1>
+       <Slider {...settings }>
+{books.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails}></Books>))}</Slider>
 </div>
        
     </main>

@@ -13,8 +13,8 @@ const Books = ({book,handleCartCount,getBookDetails}) => {
         discountedPrice = bookPriceCalc.slice(2).join('');
     }
     return (
-        <div className='flex items-center gap-12 w-full h-full'>
-            <img src={bookImage} alt="book-image.png" className='rounded-xl w-[80%] h-full' />
+        <div className='flex items-center gap-12 w-full h-full p-5'>
+            <img src={bookImage} alt="book-image.png" className='rounded-xl w-[500px] h-full' />
             <div className='w-full h-full *:mb-5'>
                 <h1 className='text-lg font-bold'>{bookTitle}</h1>
                 <p className='text-[#0d084285] text-sm'>পাঠকসমাজে তাঁর পরিচিতি এখন গৎবাঁধা লেখার বাইরে নতুনত্বের আমেজ এনে দেওয়া তরুণ লেখক হিসেবে।</p>
