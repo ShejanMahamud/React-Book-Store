@@ -7,7 +7,16 @@ const BookSection = ({handleCartCount,getBookDetails}) => {
     const [searchBook, setSearchBook] = useState('');
     const [inputValue, setInputValue] = useState('');
     const [searchError, setSearchError] = useState(false);
+    const [selectCategory, setselectCategory] = useState('');
    
+    useEffect(()=>{
+        if(selectCategory){
+        fetch(`https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/BookData/${selectCategory.toLowerCase()}.json`)
+        .then(res=>res.json())
+        .then(data => setBooks(data))
+    }
+    },[selectCategory]);
+
     useEffect(()=>{
         if(selectAuthor){
         fetch(`https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/BookData/${selectAuthor.toLowerCase()}.json`)
@@ -43,7 +52,9 @@ const BookSection = ({handleCartCount,getBookDetails}) => {
 const handleAuthorSelect = (e) => {
     setSelectAuthor(e.target.value)
 }
-
+const handleCategorySelect = (e) => {
+    setSelectAuthor(e.target.value)
+}
 const handleSearchBtn = () => {
     const inputValueStr = inputValue.replace(" ",'-')
     setSearchBook(inputValueStr);
@@ -64,10 +75,22 @@ const handleSearchBtn = () => {
         <option value="humayen-ahmed">Humayen Ahmed</option>
         <option value="sadat-hossain">Sadat Hossian</option>
         <option value="Shaykh-Ahmadullah">Shayek Ahmadullah</option>
+        <option value="Muhammod-Zafar-Iqbalh">Muhammod Zafar Iqbalh</option>
        </select>
        </div>
        </div>
 
+       <div>
+       <h1 className='text-xl font-semibold mb-5'>
+            Select Category
+        </h1>
+       <div className='bg-gray-200 px-5 py-3 rounded-lg inline-flex justify-between'>
+       <select className='bg-transparent focus:outline-none' onChange={handleCategorySelect}>
+        <option value="choose-category">Choose a category</option>
+        <option value="programming">Programming</option>
+       </select>
+       </div>
+       </div>
        
 <div>
 <div className='bg-gray-100 text-gray-500 px-5 py-2 rounded-lg flex items-center justify-between'>
@@ -77,7 +100,7 @@ const handleSearchBtn = () => {
 
         <div role="alert" className={`alert alert-error my-5 ${searchError ? 'visible' : 'hidden'}`}>
   <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-  <span>Error! Task failed successfully.</span>
+  <span>Sorry! Author not found.</span>
 </div>
 </div>
 

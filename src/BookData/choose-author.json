@@ -1,17 +1,52 @@
 [
   {
-    "bookTitle": "হাবলুদের জন্য প্রোগ্রামিং",
-    "bookAuthor": "ঝংকার মাহবুব",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/00ea58560_112222.jpg",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 300 TK. 225"
+    "bookTitle": "প্রথম ২",
+    "bookAuthor": "হুমায়ূন আহমেদ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Prothom_2-Humayun_Ahmed-5b3ca-379835.jpg",
+    "bookStatus": "",
+    "bookPrice": "TK. 800 TK. 600"
   },
   {
-    "bookTitle": "রিচার্জ ইয়োর ডাউন ব্যাটারি",
-    "bookAuthor": "ঝংকার মাহবুব",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/34eff29de_155900.jpg",
+    "bookTitle": "প্রথম ১",
+    "bookAuthor": "হুমায়ূন আহমেদ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Prothom_1-Humayun_Ahmed-00ffa-379833.jpg",
+    "bookStatus": "",
+    "bookPrice": "TK. 800 TK. 600"
+  },
+  {
+    "bookTitle": "রুপালি পর্দা (১ম খন্ড)",
+    "bookAuthor": "হুমায়ূন আহমেদ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Rupali_Parda1st_part-Humayun_Ahmed-0deb8-372494.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 1,000 TK. 750"
+  },
+  {
+    "bookTitle": "রচনাবলী ১২",
+    "bookAuthor": "হুমায়ূন আহমেদ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Roconaboli_12-Humayun_Ahmed-1dbdb-357219.jpg",
     "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 300 TK. 225"
+    "bookPrice": "TK. 1,000 TK. 750"
+  },
+  {
+    "bookTitle": "শুভ্র সমগ্র",
+    "bookAuthor": "হুমায়ূন আহমেদ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Subhro_Samagra-Humayun_Ahmed-61141-352497.jpg",
+    "bookStatus": "",
+    "bookPrice": "TK. 720"
+  },
+  {
+    "bookTitle": "আশ্চর্য মেঘদল",
+    "bookAuthor": "হুমায়ূন আহমেদ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Ashcarjo_Meghdol-Humayun_Ahmed-e58b8-349999.jpg",
+    "bookStatus": "",
+    "bookPrice": "TK. 1,070 TK. 803"
+  },
+  {
+    "bookTitle": "অঁহক",
+    "bookAuthor": "হুমায়ূন আহমেদ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Ohok-Humayun_Ahmed-e0de8-344783.jpg",
+    "bookStatus": "Product In Stock",
+    "bookPrice": "TK. 350 TK. 263"
   },
   {
     "bookTitle": "প্রোগ্রামিংয়ের বলদ টু বস",
@@ -131,5 +166,26 @@
     "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
     "bookStatus": "",
     "bookPrice": "TK. 560 TK. 420"
+  },
+  {
+    "bookTitle": "শায়খ আহমাদুল্লাহ সাজেস্টেড ২টি বই",
+    "bookAuthor": "আল্লামা সফিউর রহমান মুবারকপুরী (রহ.)",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 1,100 TK. 715"
+  },
+  {
+    "bookTitle": "সীরাত স্মারক-২০২১",
+    "bookAuthor": "শায়খ আহমাদুল্লাহ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 100"
+  },
+  {
+    "bookTitle": "বইমেলা ২০২১-এর বেস্টসেলার ৮টি ইসলামি বই",
+    "bookAuthor": "ড. মিজানুর রহমান আজহারি",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 1,833 TK. 1,395"
   }
 ]
