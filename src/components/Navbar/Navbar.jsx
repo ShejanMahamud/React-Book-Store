@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 
-const Navbar = ({cartCount,cartItems}) => {
+const Navbar = ({cartCount,cartItems,setCartCount,total,setTotal}) => {
+  
+  const [deleteCart, setDeleteCart] = useState([]);
 
-  const [deleteCart, setDeleteCart] = useState(false)
+const handleDeleteFromCart = (index) => {
+  setDeleteCart([...deleteCart,index])
+  setCartCount(cartCount-1);
+}
 
   return (
     <nav className='flex items-center justify-between w-[90%] mx-auto my-5'>
@@ -140,16 +145,20 @@ const Navbar = ({cartCount,cartItems}) => {
       <div tabIndex={0} className="my-3 z-[1] card card-compact dropdown-content w-96 bg-base-100 shadow ">
         <div className="card-body">
           <span className="font-bold text-lg">{cartCount} Items</span>
-{
-  cartItems.map((book, index) => (
-    <div key={index} className='flex items-center justify-between'>
-      <span className='w-[50%]'>{book.bookName}</span>
-      <span>{book.bookPrice}</span>
-      <button onClick={()=>console.log(book.bookName)}><i class="fa-solid fa-trash"></i></button>
-    </div>
-  ))
-}
-          <span className="text-info">Subtotal: 0</span>
+{       cartItems.map((book, index) => (
+        !deleteCart.includes(index) && (
+          <div key={index} className={`flex items-center justify-between`}>
+            <span className='w-[50%]'>{book.bookName}</span>
+            <span>{book.bookPrice}</span>
+            <button onClick={() => {
+              const priceInNum = Number(book.bookPrice.replace("TK.",''));
+              handleDeleteFromCart(index);setTotal(total-priceInNum)}}>
+              <i className="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        )
+))         }
+          <span className="text-info">Subtotal: {total}</span>
           <div className="card-actions">
             <button className="btn bg-[#FFCE1A] btn-block text-white hover:bg-[#ffce1a]">View cart</button>
           </div>

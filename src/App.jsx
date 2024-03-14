@@ -11,20 +11,32 @@ function App() {
     setCartCount(cartCount + 1);
   }
 
+
+
   const [bookName, setbookName] = useState('');
 const [bookPrice, setBookPrice] = useState('');
 const [cartItems, setCartItems] = useState([]);
-const getBookDetails = (bookName, bookPrice) => {
-  const newCartItems = {bookName,bookPrice};
 
+
+
+const [total,setTotal] = useState(0);
+
+
+
+
+const getBookDetails = (bookName, bookPrice) => {
+  const priceInNum = Number(bookPrice.replace("TK.",''));
+  const newCartItems = {bookName,bookPrice};
   setCartItems((prev)=>[...prev, newCartItems])
 setbookName(bookName);
 setBookPrice(bookPrice);
+setTotal(total+priceInNum);
 }
+
 
   return (
     <div className='w-full h-auto'>
-      <Navbar cartCount={cartCount} cartItems={cartItems}></Navbar>
+      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal}></Navbar>
       <Header></Header>
       <BookSection handleCartCount={handleCartCount} getBookDetails={getBookDetails}></BookSection>
     </div>
