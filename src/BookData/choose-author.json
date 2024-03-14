@@ -1,481 +1,11 @@
 [
   {
-    "bookTitle": "লীডারশীপ",
-    "bookAuthor": "মুজাহিদ রাসেল",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookTitle": "হাবলুদের জন্য প্রোগ্রামিং",
+    "bookAuthor": "ঝংকার মাহবুব",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/00ea58560_112222.jpg",
     "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 310 TK. 217"
+    "bookPrice": "TK. 300 TK. 225"
   },
-  {
-    "bookTitle": "সন্দীপন প্রকাশনের ৪টি বইয়ের সেট - (নোটপ্যাড ও বুকমার্ক Free)",
-    "bookAuthor": "মাওলানা মাহবুবুল হাসান আরিফী",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 1,155 TK. 799"
-  },
-  {
-    "bookTitle": "জীবন গড়ার পাথেয়",
-    "bookAuthor": "হযরত মুফতী শামসুদ্দীন জিয়া",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 200 TK. 120"
-  },
-  {
-    "bookTitle": "মাওয়ায়েজে সাহাবা",
-    "bookAuthor": "শায়খ সালেহ আহমদ আশ-শামী",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 680 TK. 265"
-  },
-  {
-    "bookTitle": "বিপদ যখন নিয়ামাত - ২",
-    "bookAuthor": "ড. ইয়াদ কুনাইবী হাফিজাহুল্লাহ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 300 TK. 210"
-  },
-  {
-    "bookTitle": "দরজা এখনও খোলা",
-    "bookAuthor": "ইমাম ইবনু আবিদ দুন্ইয়া (রহিমাহুল্লাহ)",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 110 TK. 77"
-  },
-  {
-    "bookTitle": "দরদমাখা আহ্বান",
-    "bookAuthor": "মাওলানা যুলফিকার আহমদ নকশবন্দী",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 70 TK. 49"
-  },
-  {
-    "bookTitle": "বিপদ যখন নিয়ামাত ১ম এবং ২য় পত্র একত্রে",
-    "bookAuthor": "শাইখ মূসা জিবরীল",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 450 TK. 315"
-  },
-  {
-    "bookTitle": "বেলা ফুরাবার আগে",
-    "bookAuthor": "আরিফ আজাদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 335 TK. 218"
-  },
-  {
-    "bookTitle": "আরিফ আজাদের মৌলিক, যৌথ ও সম্পাদিত ৩টি বইয়ের কালেকশন",
-    "bookAuthor": "আরিফ আজাদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 885 TK. 660"
-  },
-  {
-    "bookTitle": "কুরআন থেকে নেওয়া জীবনের পাঠ",
-    "bookAuthor": "আরিফ আজাদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 330 TK. 248"
-  },
-  {
-    "bookTitle": "ভয়ংকর ভূতুড়ে",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 150 TK. 113"
-  },
-  {
-    "bookTitle": "ভূত মন্ত্র",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 100 TK. 75"
-  },
-  {
-    "bookTitle": "তোমাদের এই নগরে",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 250 TK. 188"
-  },
-  {
-    "bookTitle": "হিমু এবং একটি রাশিয়ান পরী",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "একটি সাইকেল এবং কয়েকটি ডাহুক পাখি",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 220 TK. 165"
-  },
-  {
-    "bookTitle": "অনিল বাগচীর একদিন",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 150 TK. 113"
-  },
-  {
-    "bookTitle": "বিপদ",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 150 TK. 113"
-  },
-  {
-    "bookTitle": "আমার আছে জল",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 150 TK. 113"
-  },
-  {
-    "bookTitle": "ছবি বানানোর গল্প",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 600 TK. 450"
-  },
-  {
-    "bookTitle": "একি কান্ড!",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 150 TK. 113"
-  },
-  {
-    "bookTitle": "কৃষ্ণপক্ষ",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 225 TK. 169"
-  },
-  {
-    "bookTitle": "বিরহগাঁথা ৩",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 500 TK. 375"
-  },
-  {
-    "bookTitle": "বিরহগাঁথা ২",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 500 TK. 375"
-  },
-  {
-    "bookTitle": "বিরহগাঁথা ১",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 500 TK. 375"
-  },
-  {
-    "bookTitle": "ছেলেটা",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 160 TK. 120"
-  },
-  {
-    "bookTitle": "বোকাভূ",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 100 TK. 75"
-  },
-  {
-    "bookTitle": "পরীর মেয়ে মেঘবতী",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 140 TK. 105"
-  },
-  {
-    "bookTitle": "হুমায়ূন ৫০",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 1,000 TK. 750"
-  },
-  {
-    "bookTitle": "স্বপ্ন ও অন্যান্য",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "যশোহা বৃক্ষের দেশে",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "এলেবেলে (২য় পর্ব)",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 160 TK. 120"
-  },
-  {
-    "bookTitle": "এলেবেলে (১ম পর্ব)",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 160 TK. 120"
-  },
-  {
-    "bookTitle": "শ্রেষ্ঠ গল্প",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 600 TK. 450"
-  },
-  {
-    "bookTitle": "জলকন্যা",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 160 TK. 120"
-  },
-  {
-    "bookTitle": "ওমেগা পয়েন্ট",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 220 TK. 165"
-  },
-  {
-    "bookTitle": "ইমা",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 160 TK. 120"
-  },
-  {
-    "bookTitle": "শূন্য",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 180 TK. 135"
-  },
-  {
-    "bookTitle": "A Few Youths In the Moon",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "In Blissful Hell-Nandita Narake",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "আমাদের শাদা বাড়ি",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 140 TK. 105"
-  },
-  {
-    "bookTitle": "মিসির আলির অমীমাংসিত রহস্য",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 220 TK. 165"
-  },
-  {
-    "bookTitle": "মন্দ্রসপ্তক",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 180 TK. 135"
-  },
-  {
-    "bookTitle": "আয়নাঘর",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 190 TK. 143"
-  },
-  {
-    "bookTitle": "জলপদ্ম",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "আশাবরী",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "নবনী",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 260 TK. 195"
-  },
-  {
-    "bookTitle": "তিথির নীল তোয়ালে",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 240 TK. 180"
-  },
-  {
-    "bookTitle": "শ্রাবণ মেঘের দিন",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 400 TK. 300"
-  },
-  {
-    "bookTitle": "এবং হিমু",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 160 TK. 120"
-  },
-  {
-    "bookTitle": "এই মেঘ, রৌদ্রছায়া",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 260 TK. 195"
-  },
-  {
-    "bookTitle": "আজ চিত্রার বিয়ে",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 180 TK. 135"
-  },
-  {
-    "bookTitle": "মিসির আলি! আপনি কোথায়?",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "ছোটদের সেরা গল্প",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 250 TK. 188"
-  },
-  {
-    "bookTitle": "1971",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 160 TK. 120"
-  },
-  {
-    "bookTitle": "প্রিয়তমেষু",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 250 TK. 188"
-  },
-  {
-    "bookTitle": "জয়জয়ন্তী",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 225 TK. 169"
-  },
-  {
-    "bookTitle": "আমরা কেউ বাসায় নেই",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 240 TK. 180"
-  },
-  {
-    "bookTitle": "নীল অপরাজিতা",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 200 TK. 150"
-  },
-  {
-    "bookTitle": "দূরে কোথায়",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 350 TK. 263"
-  },
-  {
-    "bookTitle": "মুক্তিযুদ্ধের উপন্যাসসমগ্র",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "Product In Stock",
-    "bookPrice": "TK. 850 TK. 638"
-  },
-  {
-    "bookTitle": "২০১৬ সালের রকমারি বেস্ট সেলার গল্প ৫টি বইয়ের কালেকশন",
-    "bookAuthor": "আর জে কিবরিয়া",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 976"
-  },
-  {
-    "bookTitle": "অবশ্যই পড়া উচিত এমন ১০টি সমকালীন বাংলা উপন্যাস",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 3,275 TK. 2,758"
-  },
-  {
-    "bookTitle": "২০১৭ সালে রকমারি বেস্ট সেলার উপন্যাস ৫টি বইয়ের কালেকশন",
-    "bookAuthor": "শাহাদুজ্জামান",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 2,225 TK. 1,914"
-  },
-  {
-    "bookTitle": "২০১৮ সালে রকমারি বেস্ট সেলার উপন্যাস ৫টি বইয়ের কালেকশন",
-    "bookAuthor": "সাদাত হোসাইন",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 2,070 TK. 1,683"
-  },
-  {
-    "bookTitle": "বইমেলা ২০২০ এর আলোচিত ১০টি উপন্যাস",
-    "bookAuthor": "লতিফুল ইসলাম শিবলী",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 4,704 TK. 4,029"
-  },
-  {
-    "bookTitle": "রোমান্টিক উপন্যাসের একাল-সেকাল",
-    "bookAuthor": "হুমায়ূন আহমেদ",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 1,605 TK. 1,351"
-  },
-  {
-    "bookTitle": "সাদাত হোসাইন এর আলোচিত উপন্যাস ও কবিতার ১৩টি বই",
-    "bookAuthor": "সাদাত হোসাইন",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
-    "bookStatus": "",
-    "bookPrice": "TK. 4,850 TK. 3,640"
-  },
-
   {
     "bookTitle": "রিচার্জ ইয়োর ডাউন ব্যাটারি",
     "bookAuthor": "ঝংকার মাহবুব",
@@ -526,31 +56,80 @@
     "bookPrice": "TK. 1,020 TK. 765"
   },
   {
-    "bookTitle": "ঝংকার মাহবুবের বইসমূহ",
-    "bookAuthor": "ঝংকার মাহবুব",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/337275098_160901.jpg",
-    "bookStatus": "",
-    "bookPrice": "TK. 1,320 TK. 990"
+    "bookTitle": "মুসলিম চরিত্র",
+    "bookAuthor": "হুজ্জাতুল ইসলাম ইমাম গাযযালী রহ.",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "Product In Stock",
+    "bookPrice": "TK. 250 TK. 225"
   },
   {
-    "bookTitle": "আত্ম উন্নয়ন বই স্টুডেন্ট কালেকশন",
-    "bookAuthor": "ঝংকার মাহবুব",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/4dd6c8196_162156.jpg",
-    "bookStatus": "",
-    "bookPrice": "TK. 600 TK. 450"
+    "bookTitle": "অলসতার বিরুদ্ধে যুদ্ধ",
+    "bookAuthor": "ড. খালিদ আবু শাদি",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "Product In Stock",
+    "bookPrice": "TK. 200 TK. 140"
   },
   {
-    "bookTitle": "আত্মউন্নয়ন রকমারি বেস্টসেলার কালেকশন",
-    "bookAuthor": "মোঃ জাকির হোসেন",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/0a78216e9_162163.jpg",
-    "bookStatus": "",
-    "bookPrice": "TK. 2,317 TK. 1,738"
+    "bookTitle": "হে যুবক ফিরে এসো রবের দিকে",
+    "bookAuthor": "শাইখ খালিদ আর রশিদ",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "Product In Stock",
+    "bookPrice": "TK. 240 TK. 180"
   },
   {
-    "bookTitle": "বইমেলা ২০১৮ রকমারি বেস্টসেলার কালেকশন",
-    "bookAuthor": "মুহম্মদ জাফর ইকবাল",
-    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/c8318d41e_162160.jpg",
+    "bookTitle": "ওপারেতে সর্বসুখ",
+    "bookAuthor": "আরিফুল ইসলাম",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "Product In Stock",
+    "bookPrice": "TK. 172 TK. 112"
+  },
+  {
+    "bookTitle": "যে জীবন ফড়িঙের যে জীবন জোনাকির",
+    "bookAuthor": "সাজিদ ইসলাম",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "Product In Stock",
+    "bookPrice": "TK. 250 TK. 188"
+  },
+  {
+    "bookTitle": "মরণোত্তম",
+    "bookAuthor": "সাদাত হোসাইন",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
     "bookStatus": "",
-    "bookPrice": "TK. 1,520 TK. 1,125"
+    "bookPrice": "TK. 360"
+  },
+  {
+    "bookTitle": "মেঘেদের দিন",
+    "bookAuthor": "সাদাত হোসাইন",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 270"
+  },
+  {
+    "bookTitle": "অর্ধবৃত্ত",
+    "bookAuthor": "সাদাত হোসাইন",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 590 TK. 507"
+  },
+  {
+    "bookTitle": "যেতে চাইলে যেও",
+    "bookAuthor": "সাদাত হোসাইন",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 150 TK. 129"
+  },
+  {
+    "bookTitle": "সাদাত হোসাইন এর জনপ্রিয় ৪টি বই",
+    "bookAuthor": "সাদাত হোসাইন",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 1,410 TK. 1,210"
+  },
+  {
+    "bookTitle": "সাদাত হোসাইনের কবিতা কালেকশন",
+    "bookAuthor": "সাদাত হোসাইন",
+    "bookImage": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/book_av.png",
+    "bookStatus": "",
+    "bookPrice": "TK. 560 TK. 420"
   }
 ]

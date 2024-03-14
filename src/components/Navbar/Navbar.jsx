@@ -118,11 +118,6 @@ const handleDeleteFromCart = (index) => {
     <span className='font-semibold text-3xl font-poppins text-blue-400'>Johu<span className='text-[#FFCE1A]'>Books</span> </span>
         </div>
 
-        <div className='bg-gray-100 text-gray-500 px-5 py-2 rounded-lg flex items-center justify-between'>
-    <input type="text" className='bg-transparent focus:outline-none' placeholder='Search Books..'/>
-    <button><i class="las la-search text-xl"></i></button>
-        </div>
-
         <div className='flex items-center gap-6'>
         <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.1429 5.88889C15.1429 8.58895 12.8403 10.7778 10 10.7778C7.15968 10.7778 4.85714 8.58895 4.85714 5.88889C4.85714 3.18883 7.15968 1 10 1C12.8403 1 15.1429 3.18883 15.1429 5.88889Z" fill="white"/>
@@ -145,8 +140,10 @@ const handleDeleteFromCart = (index) => {
       <div tabIndex={0} className="my-3 z-[1] card card-compact dropdown-content w-96 bg-base-100 shadow ">
         <div className="card-body">
           <span className="font-bold text-lg">{cartCount} Items</span>
+
+
 {       cartItems.map((book, index) => (
-        !deleteCart.includes(index) && (
+         !deleteCart.includes(index) && (
           <div key={index} className={`flex items-center justify-between`}>
             <span className='w-[50%]'>{book.bookName}</span>
             <span>{book.bookPrice}</span>
@@ -157,7 +154,9 @@ const handleDeleteFromCart = (index) => {
             </button>
           </div>
         )
+
 ))         }
+
           <span className="text-info">Subtotal: {total}</span>
           <div className="card-actions">
             <button className="btn bg-[#FFCE1A] btn-block text-white hover:bg-[#ffce1a]">View cart</button>
