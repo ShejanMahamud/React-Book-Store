@@ -1,0 +1,86 @@
+[
+  {
+    "recipe_id": 1,
+    "recipe_name": "Spicy Chicken Curry",
+    "short_description": "A flavorful and aromatic chicken curry with a spicy kick.",
+    "ingredients": [
+      "550 g chicken",
+      "120 ml soy sauce",
+      "200 g basil leaves",
+      "400 g mushroom"
+    ],
+    "preparing_time": 45,
+    "calories": 380,
+    "recipe_image": "https://i.ibb.co/dks9stv/spicy-chicken-curry.webp"
+  },
+  {
+    "recipe_id": 2,
+    "recipe_name": "Pasta Arrabiata",
+    "short_description": "Classic Italian pasta dish with a spicy tomato sauce.",
+    "ingredients": [
+      "400 g penne pasta",
+      "500 ml tomato sauce",
+      "100 g parmesan cheese",
+      "4 cloves garlic"
+    ],
+    "preparing_time": 30,
+    "calories": 320,
+    "recipe_image": "https://i.ibb.co/Pg595Tn/chicken-arrabiata.jpg"
+  },
+  {
+    "recipe_id": 3,
+    "recipe_name": "Vegetable Stir-Fry",
+    "short_description": "A colorful and nutritious stir-fry loaded with fresh vegetables.",
+    "ingredients": [
+      "300 g mixed vegetables (bell peppers, broccoli, carrots)",
+      "150 g tofu",
+      "50 ml soy sauce",
+      "2 tbsp vegetable oil"
+    ],
+    "preparing_time": 25,
+    "calories": 250,
+    "recipe_image": "https://i.ibb.co/GRH7KkX/vegetable-stir-fry.jpg"
+  },
+  {
+    "recipe_id": 4,
+    "recipe_name": "Lemon Garlic Shrimp Salad",
+    "short_description": "Refreshing salad featuring succulent shrimp with a zesty lemon garlic dressing.",
+    "ingredients": [
+      "400 g shrimp",
+      "100 g mixed greens",
+      "1 lemon",
+      "2 cloves garlic"
+    ],
+    "preparing_time": 20,
+    "calories": 200,
+    "recipe_image": "https://i.ibb.co/0VnR9t2/Lemon-Garlic-Butterfly-Shrimp-Salad.jpg"
+  },
+  {
+    "recipe_id": 5,
+    "recipe_name": "Hearty Beef Stew",
+    "short_description": "Comforting beef stew simmered to perfection with tender vegetables.",
+    "ingredients": [
+      "600 g beef stew meat",
+      "300 g potatoes",
+      "200 g carrots",
+      "1 onion"
+    ],
+    "preparing_time": 75,
+    "calories": 450,
+    "recipe_image": "https://i.ibb.co/PQyHCcK/Hearty-Beef-Stew.webp"
+  },
+  {
+    "recipe_id": 6,
+    "recipe_name": "Decadent Chocolate Mousse",
+    "short_description": "Indulgent dessert featuring rich and creamy chocolate mousse.",
+    "ingredients": [
+      "200 g dark chocolate",
+      "300 ml heavy cream",
+      "50 g sugar",
+      "2 eggs"
+    ],
+    "preparing_time": 40,
+    "calories": 300,
+    "recipe_image": "https://i.ibb.co/TgHLRxf/Decadent-Chocolate-Mousse.jpg"
+  }
+]
