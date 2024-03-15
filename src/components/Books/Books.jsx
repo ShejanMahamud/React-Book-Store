@@ -13,16 +13,16 @@ const Books = ({book,handleCartCount,getBookDetails}) => {
         discountedPrice = bookPriceCalc.slice(2).join('');
     }
     return (
-        <div className='flex items-center gap-12 w-full h-full p-5'>
-            <img src={bookImage} alt="book-image.png" className='rounded-xl w-[500px] h-full' />
+        <div className='flex items-center gap-12 w-full h-full lg:p-5 p-10 lg:flex-row flex-col'>
+            <img src={bookImage} alt="book-image.png" className='rounded-xl w-[200px] lg:w-[500px] h-full' />
             <div className='w-full h-full *:mb-5'>
-                <h1 className='text-lg font-bold'>{bookTitle}</h1>
-                <p className='text-[#0d084285] text-sm'>পাঠকসমাজে তাঁর পরিচিতি এখন গৎবাঁধা লেখার বাইরে নতুনত্বের আমেজ এনে দেওয়া তরুণ লেখক হিসেবে।</p>
-                <p>{bookAuthor}</p>
-                <p className='font-medium text-lg'>
+                <h1 className='lg:text-lg text-base font-bold'>{bookTitle}</h1>
+                <p className='text-[#0d084285] lg:text-sm text-xs'>পাঠকসমাজে তাঁর পরিচিতি এখন গৎবাঁধা লেখার বাইরে নতুনত্বের আমেজ এনে দেওয়া তরুণ লেখক হিসেবে।</p>
+                <p className='lg:text-base text-sm'>{bookAuthor}</p>
+                <p className='font-medium lg:text-lg text-base'>
                     {discountedPrice ? (
                         <>
-                            <span className='text-red-500 line-through text-base'>{originalPrice}</span> {discountedPrice}
+                            <span className='text-red-500 line-through text-sm lg:text-base'>{originalPrice}</span> {discountedPrice}
                         </>
                     ) : (
                         originalPrice

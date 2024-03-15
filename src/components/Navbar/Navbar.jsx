@@ -10,7 +10,7 @@ const handleDeleteFromCart = (index) => {
 }
 
   return (
-    <nav className='flex items-center justify-between w-[90%] mx-auto my-5'>
+    <nav className='flex items-center justify-between w-[90%] mx-auto my-5 lg:flex-row flex-col mx-auto'>
         <div className='flex items-center gap-1'>
 <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet">
 

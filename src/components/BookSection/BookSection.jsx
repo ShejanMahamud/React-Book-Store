@@ -5,12 +5,38 @@ import "slick-carousel/slick/slick.css";
 import Books from '../Books/Books';
 
 const settings = {
-    dots : true,
-    infinite: true,
-    slidesToShow: 2,
+    dots: true,
+    infinite: false,
     speed: 500,
-    rows: 1,
-    slidesPerRow: 2
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
 const BookSection = ({handleCartCount,getBookDetails}) => {
@@ -48,7 +74,7 @@ const BookSection = ({handleCartCount,getBookDetails}) => {
     useEffect(()=>{
         fetch(`https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/BookData/best-seller-2023.json`)
         .then(res=>res.json())
-        .then(data => setBestSellerBooks(data))
+        .then(data => setBestSellerBooks2023(data))
     },[]);
 
     useEffect(() => {
@@ -86,9 +112,9 @@ const handleSearchBtn = () => {
 
   return (
     <main className='w-[90%] mx-auto my-20 font-poppins'>
-       <div className='w-full flex justify-between items-end'>
+       <div className='w-full flex justify-between lg:items-end lg:flex-row items-start gap-10 flex-col'>
        <div>
-       <h1 className='text-xl font-semibold mb-5'>
+       <h1 className='text-base lg:text-xl font-semibold mb-5'>
             Top Sellers
         </h1>
        <div className='bg-gray-200 px-5 py-3 rounded-lg inline-flex justify-between'>
@@ -105,11 +131,11 @@ const handleSearchBtn = () => {
        </div>
 
        <div>
-       <h1 className='text-xl font-semibold mb-5'>
+       <h1 className='text-base lg:text-xl font-semibold mb-5'>
             Select Category
         </h1>
        <div className='bg-gray-200 px-5 py-3 rounded-lg inline-flex justify-between'>
-       <select className='bg-transparent focus:outline-none' onChange={handleCategorySelect}>
+       <select className='bg-transparent focus:outline-none *:text-base *:lg:text-xl' onChange={handleCategorySelect}>
         <option value="choose-category">Choose a category</option>
         <option value="programming">Programming</option>
         <option value="islamic">Islamic</option>
