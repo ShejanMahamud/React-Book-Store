@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-const Navbar = ({cartCount,cartItems,setCartCount,total,setTotal}) => {
-  
+const Navbar = ({cartCount,cartItems,setCartCount,total,setTotal,favItems,favItemsCount}) => {
   const [deleteCart, setDeleteCart] = useState([]);
 
 const handleDeleteFromCart = (index) => {
@@ -10,7 +9,7 @@ const handleDeleteFromCart = (index) => {
 }
 
   return (
-    <nav className='flex items-center justify-between w-[90%] mx-auto my-5 lg:flex-row flex-col mx-auto'>
+    <nav className='flex items-center justify-between w-[90%] my-5 lg:flex-row flex-col mx-auto'>
         <div className='flex items-center gap-1'>
 <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet">
 
@@ -126,9 +125,31 @@ const handleDeleteFromCart = (index) => {
 <path d="M10 14.4444C5.02944 14.4444 1 18.2749 1 23H19C19 18.2749 14.9706 14.4444 10 14.4444Z" stroke="#0D0842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-<svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<div className="dropdown dropdown-end">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div className="indicator">
+        <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.83058 2.71572C0.389806 5.00335 0.389806 8.71234 2.83058 11L13.5001 21L24.1694 11C26.6102 8.71233 26.6102 5.00335 24.1694 2.71572C21.7286 0.428092 17.7714 0.428092 15.3306 2.71572L13.5001 4.43151L11.6694 2.71572C9.22864 0.428093 5.27136 0.428093 2.83058 2.71572Z" stroke="#0D0842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+          <span className="badge badge-sm indicator-item">{favItemsCount}</span>
+        </div>
+      </div>
+      <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-56 lg:w-96 bg-base-100 shadow">
+        <div className="card-body">
+         {
+          favItems.map((favBook,index) => (
+            <div className='flex items-center justify-between' key={index}>
+              <span className='font-bold'>{favBook.bookName}</span>
+              <img src={favBook.bookImage} alt="favorite book.png" className='w-[50px] border-2 border-[#ffce1a]'/>
+              <span>ki</span>
+            </div>
+          ))
+         }
+        </div>
+      </div>
+</div>
+
 
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -137,7 +158,7 @@ const handleDeleteFromCart = (index) => {
           <span className="badge badge-sm indicator-item">{cartCount}</span>
         </div>
       </div>
-      <div tabIndex={0} className="my-3 z-[1] card card-compact dropdown-content w-96 bg-base-100 shadow ">
+      <div tabIndex={0} className="my-3 z-[1] card card-compact dropdown-content w-56 lg:w-96 bg-base-100 shadow ">
         <div className="card-body">
           <span className="font-bold text-lg">{cartCount} Items</span>
 

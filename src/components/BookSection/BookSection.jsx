@@ -10,7 +10,7 @@ const settings = {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
-    initialSlide: 0,
+    initialSlide: 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -39,7 +39,7 @@ const settings = {
     ]
   };
 
-const BookSection = ({handleCartCount,getBookDetails}) => {
+const BookSection = ({handleCartCount,getBookDetails,handleFavItems}) => {
     const [books, setBooks] = useState([])
     const [bestSellerBooks2023,setBestSellerBooks2023] = useState([]);
     const [selectAuthor, setSelectAuthor] = useState('');
@@ -124,8 +124,8 @@ const handleSearchBtn = () => {
         <option value="arif-azad">Arif Azad</option>
         <option value="humayen-ahmed">Humayen Ahmed</option>
         <option value="sadat-hossain">Sadat Hossian</option>
-        <option value="Shaykh-Ahmadullah">Shayek Ahmadullah</option>
-        <option value="Muhammod-Zafar-Iqbalh">Muhammod Zafar Iqbalh</option>
+        <option value="shaykh-ahmadullah">Shayek Ahmadullah</option>
+        <option value="muhammod-zafar-iqbal">Muhammod Zafar Iqbalh</option>
        </select>
        </div>
        </div>
@@ -160,14 +160,14 @@ const handleSearchBtn = () => {
        <div className='w-full my-20'>
         <h1 className='text-xl font-semibold mb-5'>{changeBookHeading}</h1>
        <Slider {...settings }>
-{books.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails}></Books>))}</Slider>
+{books.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books>))}</Slider>
 </div>
 
 
 <div className='w-full my-20'>
         <h1 className='text-xl font-semibold mb-5 uppercase'>Best Seller Books 2023</h1>
        <Slider {...settings }>
-{bestSellerBooks2023.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails}></Books>))}</Slider>
+{bestSellerBooks2023.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books>))}</Slider>
 </div>
        
     </main>
