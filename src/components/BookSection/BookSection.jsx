@@ -15,6 +15,7 @@ const settings = {
 
 const BookSection = ({handleCartCount,getBookDetails}) => {
     const [books, setBooks] = useState([])
+    const [bestSellerBooks2023,setBestSellerBooks2023] = useState([]);
     const [selectAuthor, setSelectAuthor] = useState('');
     const [searchBook, setSearchBook] = useState('');
     const [inputValue, setInputValue] = useState('');
@@ -44,6 +45,12 @@ const BookSection = ({handleCartCount,getBookDetails}) => {
         .then(data => setBooks(data))
     },[]);
 
+    useEffect(()=>{
+        fetch(`https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/BookData/best-seller-2023.json`)
+        .then(res=>res.json())
+        .then(data => setBestSellerBooks(data))
+    },[]);
+
     useEffect(() => {
         if (searchBook) {
             fetch(`https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/BookData/${searchBook.toLowerCase()}.json`)
@@ -68,7 +75,9 @@ const handleAuthorSelect = (e) => {
     setChangeBookHeading(authorName.toUpperCase().replace('-',' '))
 }
 const handleCategorySelect = (e) => {
-    setSelectCategory(e.target.value)
+    const categoryName = e.target.value;
+    setSelectCategory(e.target.value);
+    setChangeBookHeading(categoryName.toUpperCase().replace('-',' '))
 }
 const handleSearchBtn = () => {
     const inputValueStr = inputValue.replace(" ",'-')
@@ -126,6 +135,13 @@ const handleSearchBtn = () => {
         <h1 className='text-xl font-semibold mb-5'>{changeBookHeading}</h1>
        <Slider {...settings }>
 {books.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails}></Books>))}</Slider>
+</div>
+
+
+<div className='w-full my-20'>
+        <h1 className='text-xl font-semibold mb-5 uppercase'>Best Seller Books 2023</h1>
+       <Slider {...settings }>
+{bestSellerBooks2023.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails}></Books>))}</Slider>
 </div>
        
     </main>
