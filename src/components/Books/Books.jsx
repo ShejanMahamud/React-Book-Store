@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Books = ({book,getBookDetails,handleFavItems}) => {
 
@@ -6,11 +6,6 @@ const Books = ({book,getBookDetails,handleFavItems}) => {
 
     let originalPrice;
     let discountedPrice;
-    const [bookStatusCheck, setBookStatusCheck] = useState(false);
-
-    if(bookStatus !== "Low Stock"){
-        bookStatus(true);
-    }
 
     if (bookPrice.includes(' ')) {
         const bookPriceCalc = bookPrice.split(' ');
@@ -42,7 +37,7 @@ const Books = ({book,getBookDetails,handleFavItems}) => {
                     </svg>
                     <span>Add To Cart</span>
                 </button>
-                <button className='p-2 rounded-full bg-[#ffce1a]' onClick={()=>handleFavItems(bookTitle,bookImage,bookStatus)}>
+                <button className='p-2 rounded-full bg-[#ffce1a]' onClick={()=>handleFavItems(bookTitle,bookImage,discountedPrice ? discountedPrice : originalPrice,bookStatus)}>
                 <svg width="20" height="15" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.83058 2.71572C0.389806 5.00335 0.389806 8.71234 2.83058 11L13.5001 21L24.1694 11C26.6102 8.71233 26.6102 5.00335 24.1694 2.71572C21.7286 0.428092 17.7714 0.428092 15.3306 2.71572L13.5001 4.43151L11.6694 2.71572C9.22864 0.428093 5.27136 0.428093 2.83058 2.71572Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

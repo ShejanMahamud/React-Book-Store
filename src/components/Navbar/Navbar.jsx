@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Navbar = ({cartCount,cartItems,setCartCount,total,setTotal,favItems,favItemsCount}) => {
-  const [deleteCart, setDeleteCart] = useState([]);
+const Navbar = ({cartCount,cartItems,setCartCount,total,setTotal,favItems,favItemsCount,handleFavItemToCart,setCartItems}) => {
 
 const handleDeleteFromCart = (index) => {
-  setDeleteCart([...deleteCart,index])
+  const updatedCartItems = cartItems.filter((_, i) => i !== index);
+  setCartItems(updatedCartItems);
   setCartCount(cartCount-1);
 }
 
@@ -142,7 +142,8 @@ const handleDeleteFromCart = (index) => {
             <div className='flex items-center justify-between' key={index}>
               <span className='font-bold'>{favBook.bookName}</span>
               <img src={favBook.bookImage} alt="favorite book.png" className='w-[50px] border-2 border-[#ffce1a]'/>
-              <span>ki</span>
+              <button className={`${favBook.bookStatus ? 'inline-block' : 'hidden'}`} onClick={()=>handleFavItemToCart(favBook.bookName,favBook.bookImage,favBook.bookPrice,favBook.bookStatus)}><i class="fa-solid fa-cart-shopping text-2xl"></i></button>
+              <button className={`text-xs ${favBook.bookStatus ? 'hidden' : 'inline-block'}`}>Request Stock</button>
             </div>
           ))
          }
@@ -164,7 +165,6 @@ const handleDeleteFromCart = (index) => {
 
 
 {       cartItems.map((book, index) => (
-         !deleteCart.includes(index) && (
           <div key={index} className={`flex items-center justify-between`}>
             <span className='w-[50%]'>{book.bookName}</span>
             <span>{book.bookPrice}</span>
@@ -174,7 +174,6 @@ const handleDeleteFromCart = (index) => {
               <i className="fa-solid fa-trash"></i>
             </button>
           </div>
-        )
 
 ))         }
 
