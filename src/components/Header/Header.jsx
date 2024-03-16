@@ -2,6 +2,8 @@ import React from 'react';
 import AnimationSvg from './Animation.svg';
 
 const Header = () => {
+
+
   return (
     <header className='font-inter text-[#0D0842] grid-cols-1 grid lg:grid-cols-2 row-auto items-center my-28 mx-auto w-[90%] justify-items-end'>
         <div className='*:mb-10'>
@@ -16,6 +18,7 @@ const Header = () => {
             </button>
         </div>
         <div>
+          
             <img src={AnimationSvg} alt="hero.svg" />
         </div>
     </header>

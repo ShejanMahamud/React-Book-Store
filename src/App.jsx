@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { setToCart, setToRequestStock } from './Utilities/localStorage';
 import BookSection from './components/BookSection/BookSection';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import NewsSection from './components/NewsSection/NewsSection';
+
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -17,7 +19,7 @@ function App() {
 
 
 
-const getBookDetails = (bookName, bookPrice,bookStatus) => {
+const getBookDetails = (bookName, bookPrice,bookStatus,book) => {
   const priceInNum = Number(bookPrice.replace("TK.",''));
 const isExist = cartItems.find(book => book.bookName === bookName);
 if(!isExist && bookStatus !== ''){
@@ -28,6 +30,7 @@ setBookPrice(bookPrice);
 setTotal(total+priceInNum);
 setCartCount(cartCount + 1);
   toast.success('Added to cart')
+  setToCart(book)
 }
   else if(isExist){
     toast.error('Already Exist in Cart')
@@ -38,18 +41,19 @@ setCartCount(cartCount + 1);
 
 }
 
-const handleFavItems = (bookName, bookImage,bookPrice,bookStatus) => {
-  const newFavItems = {bookName, bookImage,bookPrice,bookStatus}
+const handleFavItems = (bookTitle, bookImage,bookPrice,bookStatus) => {
+  const newFavItems = {bookTitle, bookImage,bookPrice,bookStatus}
   setFavItems([...favItems, newFavItems])
   setFavItemsCount(favItemsCount + 1)
   toast.success('Added to Favorites')
 }
 
-const handleFavItemToCart = (bookName, bookImage, bookPrice, bookStatus) => {
-  getBookDetails(bookName, bookPrice, bookStatus);
+const handleFavItemToCart = (bookName, bookImage, bookPrice, bookStatus,favBook) => {
+  getBookDetails(bookName, bookPrice, bookStatus,favBook);
   const updatedFavItems = favItems.filter(item => item.bookName !== bookName);
   setFavItems(updatedFavItems);
   setFavItemsCount(prevCount => prevCount - 1);
+  // setToCart(favBook)
 }
 
 const handleRequestStock = (bookName) => {
@@ -57,12 +61,13 @@ const handleRequestStock = (bookName) => {
   setFavItems(updatedFavItems);
   setFavItemsCount(prevCount => prevCount - 1);
   toast.success('Request Saved!');
+  setToRequestStock(bookName)
 }
 
   return (
     <div className='w-full h-auto'>
-      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal} favItems={favItems} favItemsCount={favItemsCount} handleFavItemToCart={handleFavItemToCart} setCartItems={setCartItems} handleRequestStock={handleRequestStock}></Navbar>
-      <Header></Header>
+      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal} favItems={favItems} favItemsCount={favItemsCount} handleFavItemToCart={handleFavItemToCart} setCartItems={setCartItems} handleRequestStock={handleRequestStock} className='z-50'></Navbar>
+      <Header className='-z-50'></Header>
       <BookSection getBookDetails={getBookDetails} handleFavItems={handleFavItems}></BookSection>
       <NewsSection></NewsSection>
       <ToastContainer></ToastContainer>

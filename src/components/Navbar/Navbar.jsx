@@ -141,10 +141,10 @@ const handleDeleteFromCart = (index) => {
          {
           favItems.map((favBook,index) => (
             <div className='flex items-center justify-between' key={index}>
-              <span className='font-bold'>{favBook.bookName}</span>
+              <span className='font-bold'>{favBook.bookTitle}</span>
               <img src={favBook.bookImage} alt="favorite book.png" className='w-[50px] border-2 border-[#ffce1a]'/>
-              <button className={`${favBook.bookStatus ? 'inline-block' : 'hidden'}`} onClick={()=>handleFavItemToCart(favBook.bookName,favBook.bookImage,favBook.bookPrice,favBook.bookStatus)}><i class="fa-solid fa-cart-shopping text-2xl"></i></button>
-              <button onClick={()=>handleRequestStock(favBook.bookName)} className={`bg-[#FFCE1A] text-white p-2 rounded-md text-xs ${favBook.bookStatus ? 'hidden' : 'inline-block'}`}>Request Stock</button>
+              <button className={`${favBook.bookStatus ? 'inline-block' : 'hidden'}`} onClick={()=>handleFavItemToCart(favBook.bookTitle,favBook.bookImage,favBook.bookPrice,favBook.bookStatus,favBook)}><i class="fa-solid fa-cart-shopping text-2xl"></i></button>
+              <button onClick={()=>handleRequestStock(favBook.bookTitle)} className={`bg-[#FFCE1A] text-white p-2 rounded-md text-xs ${favBook.bookStatus ? 'hidden' : 'inline-block'}`}>Request Stock</button>
             </div>
           ))
          }

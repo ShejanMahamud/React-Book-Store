@@ -128,9 +128,21 @@ const handleSearchBtn = () => {
  <Swiper 
   modules={[Navigation]}
  spaceBetween={50}
-      // slidesPerView={2}
       navigation={true}
-      className='grid grid-cols-1 lg:grid-cols-2 row-auto'
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+      }}
       > 
 {books.map((book,index) => (<SwiperSlide><Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books></SwiperSlide>))} </Swiper>  
 </div>
