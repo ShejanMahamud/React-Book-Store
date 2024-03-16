@@ -1,43 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import 'swiper/css';
+import 'swiper/css/bundle';
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Books from '../Books/Books';
-
-const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    initialSlide: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
 
 const BookSection = ({handleCartCount,getBookDetails,handleFavItems}) => {
     const [books, setBooks] = useState([])
@@ -159,15 +125,21 @@ const handleSearchBtn = () => {
 
        <div className='w-full my-20'>
         <h1 className='text-xl font-semibold mb-5'>{changeBookHeading}</h1>
-       <Slider {...settings }>
-{books.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books>))}</Slider>
+ <Swiper 
+  modules={[Navigation]}
+ spaceBetween={50}
+      // slidesPerView={2}
+      navigation={true}
+      className='grid grid-cols-1 lg:grid-cols-2 row-auto'
+      > 
+{books.map((book,index) => (<SwiperSlide><Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books></SwiperSlide>))} </Swiper>  
 </div>
 
 
 <div className='w-full my-20'>
         <h1 className='text-xl font-semibold mb-5 uppercase'>Best Seller Books 2023</h1>
-       <Slider {...settings }>
-{bestSellerBooks2023.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books>))}</Slider>
+      <div className='grid lg:grid-cols-2 grid-cols-1 gap-16 items-center row-auto'>
+{bestSellerBooks2023.map((book,index) => (<Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books>))}</div> 
 </div>
        
     </main>

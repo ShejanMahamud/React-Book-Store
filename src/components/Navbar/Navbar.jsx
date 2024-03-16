@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Navbar = ({cartCount,cartItems,setCartCount,total,setTotal,favItems,favItemsCount,handleFavItemToCart,setCartItems}) => {
+const Navbar = ({cartCount,cartItems,setCartCount,total,setTotal,favItems,favItemsCount,handleFavItemToCart,setCartItems,handleRequestStock}) => {
 
 const handleDeleteFromCart = (index) => {
   const updatedCartItems = cartItems.filter((_, i) => i !== index);
   setCartItems(updatedCartItems);
   setCartCount(cartCount-1);
 }
+
 
   return (
     <nav className='flex items-center justify-between w-[90%] my-5 lg:flex-row flex-col mx-auto'>
@@ -132,7 +133,7 @@ const handleDeleteFromCart = (index) => {
         <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.83058 2.71572C0.389806 5.00335 0.389806 8.71234 2.83058 11L13.5001 21L24.1694 11C26.6102 8.71233 26.6102 5.00335 24.1694 2.71572C21.7286 0.428092 17.7714 0.428092 15.3306 2.71572L13.5001 4.43151L11.6694 2.71572C9.22864 0.428093 5.27136 0.428093 2.83058 2.71572Z" stroke="#0D0842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-          <span className="badge badge-sm indicator-item">{favItemsCount}</span>
+          <span className="badge badge-base text-white indicator-item bg-[#ffce1a]">{favItemsCount}</span>
         </div>
       </div>
       <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-56 lg:w-96 bg-base-100 shadow">
@@ -143,7 +144,7 @@ const handleDeleteFromCart = (index) => {
               <span className='font-bold'>{favBook.bookName}</span>
               <img src={favBook.bookImage} alt="favorite book.png" className='w-[50px] border-2 border-[#ffce1a]'/>
               <button className={`${favBook.bookStatus ? 'inline-block' : 'hidden'}`} onClick={()=>handleFavItemToCart(favBook.bookName,favBook.bookImage,favBook.bookPrice,favBook.bookStatus)}><i class="fa-solid fa-cart-shopping text-2xl"></i></button>
-              <button className={`text-xs ${favBook.bookStatus ? 'hidden' : 'inline-block'}`}>Request Stock</button>
+              <button onClick={()=>handleRequestStock(favBook.bookName)} className={`bg-[#FFCE1A] text-white p-2 rounded-md text-xs ${favBook.bookStatus ? 'hidden' : 'inline-block'}`}>Request Stock</button>
             </div>
           ))
          }
@@ -156,7 +157,7 @@ const handleDeleteFromCart = (index) => {
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <div className="indicator">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#0D0842"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          <span className="badge badge-sm indicator-item">{cartCount}</span>
+          <span className="badge badge-base text-white indicator-item bg-[#ffce1a]">{cartCount}</span>
         </div>
       </div>
       <div tabIndex={0} className="my-3 z-[1] card card-compact dropdown-content w-56 lg:w-96 bg-base-100 shadow ">

@@ -1,0 +1,82 @@
+[
+  {
+    "news_title": "The Secret Garden",
+    "news_description": "Follow Mary Lennox on her journey of self-discovery as she tends to a neglected garden.",
+    "news_id": "12345",
+    "news_author": "Frances Hodgson Burnett",
+    "news_date": "2024-03-01",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/85/large_fc622cc73cb5d6ddc83e9cee8f1c91b9.jpg"
+  },
+  {
+    "news_title": "The Great Gatsby",
+    "news_description": "Experience the lavish lifestyles and tragic love story set in the roaring twenties.",
+    "news_id": "12346",
+    "news_author": "F. Scott Fitzgerald",
+    "news_date": "2024-03-02",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/123/large_763434c48b31c3c80cf9d38e583ee6f1.jpg"
+  },
+  {
+    "news_title": "To Kill a Mockingbird",
+    "news_description": "Delve into the racial injustice and moral growth in the American South during the 1930s.",
+    "news_id": "12347",
+    "news_author": "Harper Lee",
+    "news_date": "2024-03-03",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/128/large_cb9351da011fd430421a7334725326f9.jpg"
+  },
+  {
+    "news_title": "1984",
+    "news_description": "Explore a dystopian society where surveillance and control reign supreme.",
+    "news_id": "12348",
+    "news_author": "George Orwell",
+    "news_date": "2024-03-04",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/93/large_77a40a7f50c4830aa0991e432f274918.jpg"
+  },
+  {
+    "news_title": "Pride and Prejudice",
+    "news_description": "Witness the complexities of love, class, and society in Jane Austen's classic novel.",
+    "news_id": "12349",
+    "news_author": "Jane Austen",
+    "news_date": "2024-03-05",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/117/large_5b3896b3b17e1ac08f99286941b4e9ad.jpg"
+  },
+  {
+    "news_title": "The Catcher in the Rye",
+    "news_description": "Follow Holden Caulfield's journey of teenage angst and rebellion in New York City.",
+    "news_id": "12350",
+    "news_author": "J.D. Salinger",
+    "news_date": "2024-03-06",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/103/large_e1982608651c0e4a21cc0ebffdf5db9d.jpg"
+  },
+  {
+    "news_title": "The Lord of the Rings",
+    "news_description": "Embark on an epic adventure through Middle-earth with Frodo and the Fellowship.",
+    "news_id": "12351",
+    "news_author": "J.R.R. Tolkien",
+    "news_date": "2024-03-07",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/59/large_146f41bdeb14f08f43e9a54d448c19ca.jpg"
+  },
+  {
+    "news_title": "Harry Potter and the Sorcerer's Stone",
+    "news_description": "Discover the magical world of Hogwarts and join Harry Potter on his first year of wizardry.",
+    "news_id": "12352",
+    "news_author": "J.K. Rowling",
+    "news_date": "2024-03-08",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/4/large_bf45bd7b8103991a14967dc2150ff304.jpg"
+  },
+  {
+    "news_title": "The Hobbit",
+    "news_description": "Join Bilbo Baggins on his unexpected journey to reclaim the Lonely Mountain from the dragon Smaug.",
+    "news_id": "12353",
+    "news_author": "J.R.R. Tolkien",
+    "news_date": "2024-03-09",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/76/large_19f1fa1fb1c43774b9ee2975485e7ca9.jpg"
+  },
+  {
+    "news_title": "Jane Eyre",
+    "news_description": "Experience the gothic romance and resilience of Jane Eyre in Charlotte Brontë's timeless classic.",
+    "news_id": "12354",
+    "news_author": "Charlotte Brontë",
+    "news_date": "2024-03-10",
+    "news_image": "https://blog-cdn.reedsy.com/directories/gallery/108/large_a825b3ba49a982af8a08fe84d648127d.jpg"
+  }
+]

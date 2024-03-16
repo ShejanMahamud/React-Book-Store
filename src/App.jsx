@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import BookSection from './components/BookSection/BookSection';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
+import NewsSection from './components/NewsSection/NewsSection';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -51,13 +52,19 @@ const handleFavItemToCart = (bookName, bookImage, bookPrice, bookStatus) => {
   setFavItemsCount(prevCount => prevCount - 1);
 }
 
-
+const handleRequestStock = (bookName) => {
+  const updatedFavItems = favItems.filter(item => item.bookName !== bookName);
+  setFavItems(updatedFavItems);
+  setFavItemsCount(prevCount => prevCount - 1);
+  toast.success('Request Saved!');
+}
 
   return (
     <div className='w-full h-auto'>
-      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal} favItems={favItems} favItemsCount={favItemsCount} handleFavItemToCart={handleFavItemToCart} setCartItems={setCartItems}></Navbar>
+      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal} favItems={favItems} favItemsCount={favItemsCount} handleFavItemToCart={handleFavItemToCart} setCartItems={setCartItems} handleRequestStock={handleRequestStock}></Navbar>
       <Header></Header>
       <BookSection getBookDetails={getBookDetails} handleFavItems={handleFavItems}></BookSection>
+      <NewsSection></NewsSection>
       <ToastContainer></ToastContainer>
     </div>
   )
