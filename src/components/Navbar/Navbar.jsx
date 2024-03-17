@@ -1,13 +1,6 @@
 import React from 'react';
 
-const Navbar = ({cartCount,cartItems,setCartCount,total,setTotal,favItems,favItemsCount,handleFavItemToCart,setCartItems,handleRequestStock,requestedBookCount,handleRequestStockFromLocalStorage,requestedStock}) => {
-
-const handleDeleteFromCart = (index) => {
-  const updatedCartItems = cartItems.filter((_, i) => i !== index);
-  setCartItems(updatedCartItems);
-  setCartCount(cartCount-1);
-}
-
+const Navbar = ({cartCount,cartItems,total,setTotal,favItems,favItemsCount,handleFavItemToCart,handleDeleteFromCart,handleRequestStock,requestedBookCount}) => {
 
   return (
     <div className='w-full'>
@@ -160,11 +153,11 @@ const handleDeleteFromCart = (index) => {
 
 {       cartItems.map((book, index) => (
           <div key={index} className={`flex items-center justify-between`}>
-            <span className='w-[50%]'>{book.bookName}</span>
+            <span className='w-[50%]'>{book.bookName ? book.bookName : book.bookTitle}</span>
             <span>{book.bookPrice}</span>
             <button onClick={() => {
               const priceInNum = Number(book.bookPrice.replace("TK.",''));
-              handleDeleteFromCart(index);setTotal(total-priceInNum)}}>
+              handleDeleteFromCart(index,book.bookName);setTotal(total-priceInNum)}}>
               <i className="fa-solid fa-trash"></i>
             </button>
           </div>

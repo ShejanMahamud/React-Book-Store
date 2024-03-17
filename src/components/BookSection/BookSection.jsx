@@ -144,7 +144,7 @@ const handleSearchBtn = () => {
         },
       }}
       > 
-{books.map((book,index) => (<SwiperSlide><Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books></SwiperSlide>))} </Swiper>  
+{books.map((book,index) => (<SwiperSlide key={index}><Books key={index} book={book} handleCartCount={handleCartCount} getBookDetails={getBookDetails} handleFavItems={handleFavItems}></Books></SwiperSlide>))} </Swiper>  
 </div>
 
 

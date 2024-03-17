@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { getStoredRequestStock, setToCart } from './Utilities/localStorage';
+import { getStoredCart, getStoredRequestStock } from './Utilities/localStorage';
 import BookSection from './components/BookSection/BookSection';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -17,8 +17,37 @@ function App() {
   const [favItemsCount, setFavItemsCount] = useState(0)
   const [total,setTotal] = useState(0);
   const [requestedBookCount, setRequestedBookCount] = useState(0);
-  const [requestedStock, setRequestedStock] = useState([]);
+  const [books, setBooks] = useState([]);
 
+useEffect(()=>{
+ const requestedBooks = getStoredRequestStock();
+ setRequestedBookCount(requestedBooks.length)
+},[])
+
+// useEffect(() => {
+//   fetch('books.json')
+//     .then(res => res.json())
+//     .then(data => {
+
+//       setBooks(data);
+
+//       const cartInLocalStorage = getStoredCart();
+
+//       const foundBooks = [];
+
+//       cartInLocalStorage.forEach(item => {
+
+//         const foundBook = data.find(book => book.bookTitle === item);
+
+//         if (foundBook) {
+//           foundBooks.push(foundBook);
+//         }
+//       });
+
+//       setBooks(foundBooks);
+//       setCartCount(cartInLocalStorage.length)
+//     })
+// }, [cartItems]);
 
 
 const getBookDetails = (bookName, bookPrice,bookStatus,book) => {
@@ -32,7 +61,7 @@ setBookPrice(bookPrice);
 setTotal(total+priceInNum);
 setCartCount(cartCount + 1);
   toast.success('Added to cart')
-  setToCart(book)
+  setToCart(bookName)
 }
   else if(isExist){
     toast.error('Already Exist in Cart')
@@ -40,19 +69,40 @@ setCartCount(cartCount + 1);
   else if(bookStatus === ''){
     toast.error('Low Stock')
   }
+}
 
+const handleDeleteFromCart = (index,bookTitle) => {
+  const isExistInLocalStorage = getStoredCart();
+
+  const isExist = isExistInLocalStorage.filter(item => item !== bookTitle);
+
+if(isExist.length !== 0){
+  const updatedCartStr = JSON.stringify(isExist);
+  localStorage.setItem('cart',updatedCartStr);
+}else{
+  localStorage.removeItem('cart')
+}
+  const updatedCartItems = cartItems.filter((_, i) => i !== index);
+  setCartItems(updatedCartItems);
+  setCartCount(cartCount-1);
+  toast.warning('Removed From Cart')
 }
 
 const handleFavItems = (bookTitle, bookImage,bookPrice,bookStatus) => {
+  const isExist = favItems.find(book => book.bookTitle === bookTitle);
   const newFavItems = {bookTitle, bookImage,bookPrice,bookStatus}
-  setFavItems([...favItems, newFavItems])
+  if(!isExist){
+    setFavItems([...favItems, newFavItems])
   setFavItemsCount(favItemsCount + 1)
   toast.success('Added to Favorites')
+  }else{
+    toast.error('Already In Favorite Items')
+  }
 }
 
 const handleFavItemToCart = (bookName, bookImage, bookPrice, bookStatus,favBook) => {
   getBookDetails(bookName, bookPrice, bookStatus,favBook);
-  const updatedFavItems = favItems.filter(item => item.bookName !== bookName);
+  const updatedFavItems = favItems.filter(item => item.bookTitle !== bookName);
   setFavItems(updatedFavItems);
   setFavItemsCount(prevCount => prevCount - 1);
   // setToCart(favBook)
@@ -62,8 +112,7 @@ const handleRequestStock = (bookName) => {
   const updatedFavItems = favItems.filter(item => item.bookTitle !== bookName);
   setFavItems(updatedFavItems);
   setFavItemsCount(prevCount => prevCount - 1);
-  toast.success('Request Saved!');
-  setToRequestStock(bookName)
+  setToRequestStock(bookName);
 }
 
 const setToRequestStock = (id) => {
@@ -79,20 +128,30 @@ const setToRequestStock = (id) => {
           request.push(id);
           const requestStr = JSON.stringify(request);
           localStorage.setItem('request-stock', requestStr);
-          setRequestedBookCount(requestedBookCount+1);
+          setRequestedBookCount(request.length);
+          toast.success('Request Saved!');
+      }else{
+        toast.warning('Already Requested!')
       }
   }
 }
 
-const handleRequestStockFromLocalStorage = () => {
-  const requestedStockInLocalStorage = getStoredRequestStock();
-setRequestedStock(requestedStockInLocalStorage)
-  
+const setToCart = (id) => {
+  const cart = getStoredCart();
+
+  const isExist = cart.includes(id);
+  if (!isExist) {
+    cart.push(id);
+    const cartStr = JSON.stringify(cart)
+    const setToLs = localStorage.setItem('cart',cartStr);
+  }
+
+    
 }
 
   return (
     <div className='w-full h-auto'>
-      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal} favItems={favItems} favItemsCount={favItemsCount} handleFavItemToCart={handleFavItemToCart} setCartItems={setCartItems} handleRequestStock={handleRequestStock} requestedBookCount={requestedBookCount} handleRequestStockFromLocalStorage={handleRequestStockFromLocalStorage} requestedStock={requestedStock}></Navbar>
+      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal} favItems={favItems} favItemsCount={favItemsCount} handleFavItemToCart={handleFavItemToCart} setCartItems={setCartItems} handleRequestStock={handleRequestStock} requestedBookCount={requestedBookCount} handleDeleteFromCart={handleDeleteFromCart}></Navbar>
       <Header></Header>
       <BookSection getBookDetails={getBookDetails} handleFavItems={handleFavItems}></BookSection>
       <NewsSection></NewsSection>

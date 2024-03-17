@@ -14,12 +14,5 @@ const getStoredCart = () => {
     return [];
 }
 
-const setToCart = (id) => {
-    const cart = getStoredCart();
-    cart.push(id);
-    const cartStr = JSON.stringify(cart)
-    const setToLs = localStorage.setItem('cart',cartStr);
-}
-
-export { getStoredRequestStock, setToCart };
+export { getStoredCart, getStoredRequestStock };
 

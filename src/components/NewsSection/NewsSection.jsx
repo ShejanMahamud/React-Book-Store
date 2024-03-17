@@ -10,7 +10,7 @@ const NewsSection = () => {
   const [news, setNews] = useState([]);
 
 useEffect(()=>{
-  fetch('https://raw.githubusercontent.com/ShejanMahamud/React-Book-Store/main/src/NewsData/news.json')
+  fetch('news.json')
   .then(res => res.json())
   .then(data => setNews(data))
 },[])
@@ -41,7 +41,7 @@ useEffect(()=>{
       }}
       > 
       {
-          news.map(news=> (<SwiperSlide><News key={news.news_id} news={news}></News></SwiperSlide>))
+          news.map((news,index)=> (<SwiperSlide key={index}><News key={index} news={news}></News></SwiperSlide>))
       }</Swiper>
       </div>
     </div>
