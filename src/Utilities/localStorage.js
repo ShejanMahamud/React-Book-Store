@@ -1,18 +1,10 @@
 const getStoredRequestStock = () => {
     const storedRequest = localStorage.getItem('request-stock');
-    if(storedRequest){
+    if (storedRequest) {
         return JSON.parse(storedRequest);
     }
     return [];
 }
-
-const setToRequestStock = (id) => {
-    const request = getStoredRequestStock();
-    request.push(id);
-    const requestStr = JSON.stringify(request)
-    const setToLs = localStorage.setItem('request-stock',requestStr);
-}
-
 
 const getStoredCart = () => {
     const storedCart = localStorage.getItem('cart');
@@ -29,5 +21,5 @@ const setToCart = (id) => {
     const setToLs = localStorage.setItem('cart',cartStr);
 }
 
-export { setToCart, setToRequestStock };
+export { getStoredRequestStock, setToCart };
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { setToCart, setToRequestStock } from './Utilities/localStorage';
+import { getStoredRequestStock, setToCart } from './Utilities/localStorage';
 import BookSection from './components/BookSection/BookSection';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -16,6 +16,8 @@ function App() {
   const [favItems, setFavItems] = useState([]);
   const [favItemsCount, setFavItemsCount] = useState(0)
   const [total,setTotal] = useState(0);
+  const [requestedBookCount, setRequestedBookCount] = useState(0);
+  const [requestedStock, setRequestedStock] = useState([]);
 
 
 
@@ -57,17 +59,41 @@ const handleFavItemToCart = (bookName, bookImage, bookPrice, bookStatus,favBook)
 }
 
 const handleRequestStock = (bookName) => {
-  const updatedFavItems = favItems.filter(item => item.bookName !== bookName);
+  const updatedFavItems = favItems.filter(item => item.bookTitle !== bookName);
   setFavItems(updatedFavItems);
   setFavItemsCount(prevCount => prevCount - 1);
   toast.success('Request Saved!');
   setToRequestStock(bookName)
 }
 
+const setToRequestStock = (id) => {
+  const request = getStoredRequestStock();
+
+  if (request.length === 0) {
+      const requestStr = JSON.stringify([id]);
+      localStorage.setItem('request-stock', requestStr);
+      setRequestedBookCount(requestedBookCount+1);
+  } else {
+      const isExist = request.includes(id);
+      if (!isExist) {
+          request.push(id);
+          const requestStr = JSON.stringify(request);
+          localStorage.setItem('request-stock', requestStr);
+          setRequestedBookCount(requestedBookCount+1);
+      }
+  }
+}
+
+const handleRequestStockFromLocalStorage = () => {
+  const requestedStockInLocalStorage = getStoredRequestStock();
+setRequestedStock(requestedStockInLocalStorage)
+  
+}
+
   return (
     <div className='w-full h-auto'>
-      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal} favItems={favItems} favItemsCount={favItemsCount} handleFavItemToCart={handleFavItemToCart} setCartItems={setCartItems} handleRequestStock={handleRequestStock} className='z-50'></Navbar>
-      <Header className='-z-50'></Header>
+      <Navbar cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} total={total}setTotal={setTotal} favItems={favItems} favItemsCount={favItemsCount} handleFavItemToCart={handleFavItemToCart} setCartItems={setCartItems} handleRequestStock={handleRequestStock} requestedBookCount={requestedBookCount} handleRequestStockFromLocalStorage={handleRequestStockFromLocalStorage} requestedStock={requestedStock}></Navbar>
+      <Header></Header>
       <BookSection getBookDetails={getBookDetails} handleFavItems={handleFavItems}></BookSection>
       <NewsSection></NewsSection>
       <ToastContainer></ToastContainer>
